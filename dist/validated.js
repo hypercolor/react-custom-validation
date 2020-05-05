@@ -101,11 +101,11 @@ function validated(getConfig) {
       }
 
       _createClass(_class, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
+        key: 'UNSAFE_componentWillMount',
+        value: function UNSAFE_componentWillMount() {
           this.shouldForceUpdate = false;
           this.registry = (0, _state.initialState)((0, _config.normalizeConfig)(getConfig(this.props)));
-          this.componentWillReceiveProps(this.props);
+          this.UNSAFE_componentWillReceiveProps(this.props);
         }
       }, {
         key: 'componentDidMount',
@@ -116,8 +116,8 @@ function validated(getConfig) {
           this.shouldForceUpdate = true;
         }
       }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
+        key: 'UNSAFE_componentWillReceiveProps',
+        value: function UNSAFE_componentWillReceiveProps(nextProps) {
           var _this2 = this;
 
           var config = (0, _config.normalizeConfig)(getConfig(nextProps));
